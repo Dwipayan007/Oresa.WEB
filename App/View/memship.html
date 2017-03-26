@@ -1,0 +1,129 @@
+<div class="mem">
+    <div class="aboutback">
+        <div class="container for">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-2 col-md-offset-3">
+                    <form role="form" class="for">
+                        <h2>APPLICATION <small>FOR MEMBERSHIP</small></h2>
+                        <hr class="colorgraph">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="organisation" id="organisation" class="form-control input-md" placeholder="Name of the Organisation" ng-model="member.Organization" tabindex="1">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="pan" id="pan" class="form-control input-md" placeholder="PAN of the Organisation" ng-model="member.Pan" tabindex="1">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="chairman" id="chairman" class="form-control input-md" placeholder="Chairman /MD" ng-model="member.ChairMan" tabindex="1">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="password" placeholder="Password" class="form-control input-md" id="password" name="password" ng-model="member.Password" />
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="password" placeholder="Conform Password" class="form-control input-md" id="cpassword" name="cpassword" ng-model="member.Cpassword" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="number" name="phno" id="phno" class="form-control input-md" placeholder="Tel No." ng-model="member.Company_Telephone_No" tabindex="1">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="fax" id="fax" class="form-control input-md" placeholder="Fax No." ng-model="member.Fax" tabindex="2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="number" name="mobile" id="mobile" class="form-control input-md" placeholder="Mobile No." ng-model="member.Mobile_No" tabindex="1">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+
+                                <div class="form-group">
+                                    <input type="email" name="email" id="email" class="form-control input-md" placeholder="Email ID" ng-model="member.Email" tabindex="2">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="website" id="website" class="form-control input-md" placeholder="Website" ng-model="member.Website" tabindex="3">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="representative" id="representative" class="form-control input-md" placeholder="Name of the Representative" ng-model="member.Repre_Name" tabindex="4">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="designation" id="designation" class="form-control input-md" placeholder="Designation" ng-model="member.Repre_Desig" tabindex="4">
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="number" name="rmobile" id="rmobile" class="form-control input-md" placeholder="Mobile No." ng-model="member.Repre_Mobile" tabindex="1">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="email" name="remail" id="remail" class="form-control input-md" placeholder="Email ID" ng-model="member.Repre_Email" tabindex="2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <select class="form-control input-lg" ng-change="changeRelated();" ng-options="option.Category for option in Category track by option.cid" ng-model="categoryData"></select>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <select class="form-control input-lg" ng-change="changepriceRang();" ng-options="option.PriceRange for option in priceRang track by option.pid" ng-model="priceRangData"></select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea name="address" id="address" class="form-control input-md" ng-model="member.Mailing_Address" placeholder="Address"></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4 col-sm-3 col-md-3">
+                                <span class="button-checkbox">
+                                    <button type="button" class="btn" data-color="info" tabindex="7">I Agree</button>
+                                    <input type="checkbox" name="t_and_c" id="t_and_c" class="hidden" ng-model="member.TermsCondition" value="1">
+                                </span>
+                            </div>
+                            <div class="col-xs-8 col-sm-9 col-md-9">
+                                By clicking
+                            </div>
+                        </div>
+                        <hr class="colorgraph">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6"><input type="submit" ng-click="saveMember(member)" class="btn btn-primary btn-block " tabindex="7"></div>
+                            <div class="col-xs-12 col-md-6"><a href="#" class="btn btn-success btn-block ">Sign In</a></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>

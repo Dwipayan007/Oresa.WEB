@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html ng-app="ores">
+<head>
+    <title>ORESA</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Pendent Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+               function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //for-mobile-apps -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- js -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- //js -->
+    <!-- start-smoth-scrolling -->
+
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+    </script>
+    <!-- start-smoth-scrolling -->
+    <!-- start menu -->
+    <link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="js/megamenu.js"></script>
+    <script>$(document).ready(function () { $(".megamenu").megamenu(); });</script>
+    <script src="js/simpleCart.min.js"> </script>
+    <link href='http://fonts.googleapis.com/css?family=Monda:400,700' rel='stylesheet' type='text/css'>
+    <!--angular script-->
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-local-storage/0.2.2/angular-local-storage.min.js"></script>
+    <!--angular script-->
+</head>
+
+<body ng-controller="indexController">
+    <div class="header_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="logo">
+                        <a href="index.html"></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="header_right">
+                        <img src="images/side.png" alt=" " class="img-responsive" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mega_nav">
+        <div class="container">
+            <div class="menu_sec">
+                <!-- start header menu -->
+                <ul class="megamenu skyblue">
+                    <li class="active grid"><a class="color1" href="index.html">Home</a></li>
+                    <li><a href="sub_page.html">About</a></li>
+                    <li><a href="#/memsignup">Membership</a></li>
+                    <li><a class="color1" href="#">Training</a></li>
+                    <li><a class="color1" href="#">Projects</a></li>
+                    <li><a class="color1" href="#">Events</a></li>
+                    <li><a class="color1" href="#">Media Room</a></li>
+                    <li><a class="color1" href="#">YellowPages</a></li>
+                    <li><a class="color1" href="#">Circulars</a></li>
+                    <li><a class="color1" href="#">Project Search</a></li>
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <!-- //logo-cart -->
+    <!------>
+    <!---->
+    <!-- banner -->
+    <div class="banner">
+        <div id="top">
+            <ul class="rslides" id="slider3">
+                <li>
+                    <img src="images/img2.png" alt=" " class="img-responsive" />
+                </li>
+                <li>
+                    <img src="images/img1.png" alt=" " class="img-responsive" />
+                </li>
+                <li>
+                    <img src="images/img3.png" alt=" " class="img-responsive" />
+                </li>
+                <li>
+                    <img src="images/img4.jpg" alt=" " class="img-responsive" />
+                </li>
+                <li>
+                    <img src="images/img6.jpg" alt=" " class="img-responsive" />
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <!-- Slider-starts-Here -->
+            <script src="js/responsiveslides.min.js"></script>
+            <script>
+                // You can also use "$(window).load(function() {"
+                $(function () {
+                    // Slideshow 4
+                    $("#slider3").responsiveSlides({
+                        auto: true,
+                        pager: false,
+                        nav: true,
+                        speed: 500,
+                        namespace: "callbacks",
+                        before: function () {
+                            $('.events').append("<li>before event fired.</li>");
+                        },
+                        after: function () {
+                            $('.events').append("<li>after event fired.</li>");
+                        }
+                    });
+
+                });
+            </script>
+            <!--//End-slider-script -->
+
+        </div>
+    </div>
+    <!-- //banner -->
+    <!-- //banner-bottom -->
+    <div ng-view=""></div>
+    <!-- footer -->
+    <div class="footer">
+
+        <div class="clearfix"></div>
+    </div>
+    <div class="footer-copy">
+        <p>© 2015 . All rights reserved | Design by <a href="http://"></a></p>
+    </div>
+    <!-- //footer -->
+    <script src="App/app.js"></script>
+    <script src="App/Controllers/indexController.js"></script>
+    <script src="App/Controllers/homeController.js"></script>
+    <script src="App/Controllers/devLoginCtrl.js"></script>
+    <script src="App/Controllers/memLoginCtrl.js"></script>
+    <script src="App/Controllers/devSignupCtrl.js"></script>
+    <script src="App/Controllers/memSignupCtrl.js"></script>
+    <script src="App/Controllers/aboutController.js"></script>
+    <script src="App/Controllers/membershipCtrl.js"></script>
+    <script src="App/Controllers/circularsCntrl.js"></script>
+    <script src="App/Controllers/eventsCntrl.js"></script>
+    <script src="App/Controllers/faqsCntrl.js"></script>
+    <script src="App/Controllers/mediaCtrl.js"></script>
+    <script src="App/Controllers/projectsCtrl.js"></script>
+    <script src="App/Controllers/psearchCntrl.js"></script>
+    <script src="App/Controllers/trainingCntrl.js"></script>
+    <script src="App/Controllers/ypagesCntrl.js"></script>
+    <script src="App/Controllers/devProfileCntrl.js"></script>
+    <script src="App/Controllers/memberProfileCtrl.js"></script>
+
+    <script src="App/Services/memSignupService.js"></script>
+    <script src="App/Services/devSignupService.js"></script>
+    <script src="App/Services/ShareService.js"></script>
+    <script src="App/Services/loginService.js"></script>
+    <script src="App/Services/uploadService.js"></script>
+
+    <script src="App/Directives/imageUpload.js"></script>
+</body>
+</html>
