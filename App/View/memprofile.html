@@ -1,0 +1,101 @@
+﻿
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-2 col-md-offset-3">
+        <form role="form" class="for">
+            <h2>APPLICATION <small>FOR MEMBERSHIP</small></h2>
+            <hr class="colorgraph">
+            <div class="row">
+                <div class="form-group">
+                    <input type="text" name="builderName" id="organisation" class="form-control input-md" placeholder="Builder Name" ng-model="MembershipData[0].Organisation_Name" tabindex="1">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="pan" id="pan" class="form-control input-md" placeholder="Owner's name" ng-model="MembershipData[0].Chairman_MD" tabindex="1">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="chairman" id="chairman" class="form-control input-md" placeholder="Website Address" ng-model="MembershipData[0].Mailing_Address" tabindex="1">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="chairman" id="chairman" class="form-control input-md" placeholder="Contact Number" ng-model="MembershipData[0].Website" tabindex="1">
+                </div>
+                <div class="form-group">
+                    <input type="number" name="chairman" id="chairman" class="form-control input-md" placeholder="Contact Number" ng-model="MembershipData[0].Company_Telephone_No" tabindex="1">
+                </div>
+                <div class="form-group">
+                    <textarea name="address" id="address" class="form-control input-lg" ng-model="MembershipData[0].Mailing_Address" placeholder="Address"></textarea>
+                </div>
+            </div>
+        </form>
+
+        <h2>COMPLETED<small>PROJECTS</small></h2>
+        <hr class="colorgraph">
+        <div class="row">
+            <div class="form-group">
+                <input type="text" name="builderName" id="organisation" class="form-control input-md" placeholder="Project Name" ng-model="completedProject.ProjectName" tabindex="1">
+            </div>
+            <div class="form-group">
+                <input type="text" name="pan" id="pan" class="form-control input-md" placeholder="Location" ng-model="completedProject.Location" tabindex="1">
+            </div>
+            <div class="form-group">
+                <input type="text" name="chairman" id="chairman" class="form-control input-md" placeholder="Project Type" ng-model="completedProject.ProjectType" tabindex="1">
+            </div>
+            <div class="form-group">
+                <input type="number" name="chairman" id="chairman" class="form-control input-md" placeholder=" Number of units" ng-model="completedProject.noofunit" tabindex="1">
+            </div>
+            <h4>Project Photo</h4>
+            <div class="form-group">
+                <input type="file" image-upload="files" multiple />
+            </div>
+            <div class="form-group" ng-hide="loader.loading2==true">
+                <input type="button" value="Upload Completed Project" class="btn-sm btn-success"  ng-click="uploadCompletedProject(completedProject)"/>
+            </div>
+            <div class="form-group" ng-show="loader.loading2==true">
+                <button class="btn btn-success">
+                    Uploading...
+                    <i class="fa fa-spinner fa-spin"></i>
+                </button>
+            </div>
+
+            <!--<div class="form-group">
+                <input type="button" value="Upload" ">
+            </div>-->
+            <!--<p ng-repeat="file in files">
+                {{file.name}}
+            </p>-->
+            <h2>UPCOMMING<small>PROJECTS</small></h2>
+            <hr class="colorgraph">
+            <div class="row">
+
+                <div class="form-group">
+                    <input type="text" name="builderName" id="organisation" class="form-control input-md" placeholder="Project Name" ng-model="upcoming.ProjectName" tabindex="1">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" name="pan" id="pan" class="form-control input-md" placeholder="Location" ng-model="upcoming.Location" tabindex="1">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="chairman" id="chairman" class="form-control input-md" placeholder="Project Type" ng-model="upcoming.ProjectType" tabindex="1">
+                </div>
+
+                <div class="form-group">
+                    <input type="number" name="chairman" id="chairman" class="form-control input-md" placeholder=" Number of units" ng-model="upcoming.noofunit" tabindex="1">
+                </div>
+                <h4>Project Photo</h4>
+                <div class="form-group">
+                    <input type="file" id="upcoming"  image-upload="files" multiple />
+                </div>
+                <div class="form-group" ng-hide="loader.loading1==true">
+                    <input type="button" value="Upload Upcoming Project" class="btn-sm btn-success" ng-click="uploadUpcomingProject(upcoming)"/>
+                </div>
+                <div class="form-group" ng-show="loader.loading1==true">
+                    <button class="btn btn-success" ng-click="uploadUpcomingProject(upcoming)">
+                        Uploading...
+                        <i class="fa fa-spinner fa-spin"></i>
+                    </button>
+                </div>
+                <!--<div class="form-group">
+                    <input type="button" value="Upload" >
+                </div>-->
+            </div>
+        </div>
+    </div>
+</div>

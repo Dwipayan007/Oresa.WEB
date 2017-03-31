@@ -2075,6 +2075,7 @@ border:none;
   border-left: none;
   border-right: none;
 }
+
 .log form input[type=submit]:hover {
   background:#F65A5B; 
   transition: .5s all;
@@ -2308,6 +2309,11 @@ label.radio {
 	.wel a {
 	  width: 28%;
 	}
+}
+@media (min-width:1200px) {
+ .container{
+     width:1366px !important;
+ }
 }
 @media (max-width:1280px){
 	.contact-bottom iframe {
@@ -2656,6 +2662,17 @@ label.radio {
 	}
 }
 @media (max-width:640px){
+    
+    .log form input[type="text"], .log form input[type="password"] {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+        font-weight: 400;
+        border: 1px solid #e6e6e6;
+        outline: none;
+        color: #000;
+        margin-bottom: 32px;
+    }
 	.mask {
 	  left:26%;
 	}
@@ -3343,3 +3360,21 @@ label.radio {
     background: url(../images/logo.png) no-repeat 0px 61px;
     background-size: 36%;	}
 }
+.loginForm {
+    border: none;
+    color: #ffffff;
+    padding: 8px 35px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+    margin: 0px 0 32px 53px;
+    background: #204056;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+    .loginForm:hover {
+        background: #F65A5B;
+        transition: .5s all;
+        -webkit-transition: .5s all;
+    }

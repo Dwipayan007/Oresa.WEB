@@ -15,53 +15,57 @@ ores.constant('baseService', 'http://localhost:57853/');
 ores.config(["$routeProvider", function ($routeProvider) {
     $routeProviderReference = $routeProvider;
     $routeProvider.when("/home", {
-       controller: "homeController",
-       templateUrl: "App/View/home.html"
+        controller: "homeController",
+        templateUrl: "App/View/home.html"
     })
-    .when("/devlogin", {
-       controller: "devLoginCntrl",
-       templateUrl: "App/View/devlogin.html"
-    })
-    .when("/memlogin", {
-       controller: "memLoginCtrl",
-       templateUrl: "App/View/memlogin.html"
-    })
-    .when("/devsignup", {
-       controller: "devSignupCtrl",
-       templateUrl: "App/View/devsignup.html"
-    })
-    .when("/memsignup", {
-       controller: "memSignupCtrl",
-       templateUrl: "App/View/memship.html"
-    })
+        .when("/devlogin", {
+            controller: "devLoginCntrl",
+            templateUrl: "App/View/devlogin.html"
+        })
+        .when("/memlogin", {
+            controller: "memLoginCtrl",
+            templateUrl: "App/View/memlogin.html"
+        })
+        .when("/memprofile", {
+            controller: "memberProfileCntrl",
+            templateUrl: "App/View/memprofile.html"
+        })
+        .when("/devsignup", {
+            controller: "devSignupCtrl",
+            templateUrl: "App/View/devsignup.html"
+        })
+        .when("/memsignup", {
+            controller: "memSignupCtrl",
+            templateUrl: "App/View/memship.html"
+        })
     $routeProvider.otherwise({ redirectTo: "/home" });
 }]);
-// ores.run(['$route', '$http', '$rootScope', '$location', 'loginService', 'localStorageService','ShareService',
-//     function ($route, $http, $rootScope, $location, loginService, localStorageService,ShareService) {
-//         debugger;
-//         loginService.fillAuthData();
-//         var ut = localStorageService.get("utype");
-//         $rootScope.$on('$routeChangeStart', function (event, next, current) {
-//             var path = $location.path();
-//             if (!loginService.authentication.isAuth && path==='/devlogin' && path==='/memlogin') {
-//                 if (ut === "D")
-//                     $location.path('/devlogin');
-//                 else
-//                     $location.path('/memlogin');
-//             }
-//         });
-//         $http.get("../jsondata/routedata.json").success(function (data) {
-//             debugger;
-//             var iLoop = 0, currentRoute;
-//             for (iLoop = 0; iLoop < data.records.length; iLoop++) {
-               
-//                 currentRoute = data.records[iLoop];
-//                 var routeName = "/" + currentRoute.KeyName;
-//                 $routeProviderReference.when(routeName, {
-//                     templateUrl: currentRoute.PageUrls,
-//                     controller: currentRoute.Controller
-//                 });
-//             }
-//             $route.reload();
-//         });
-//     }]);
+ ores.run(['$route', '$http', '$rootScope', '$location', 'loginService', 'localStorageService','ShareService',
+     function ($route, $http, $rootScope, $location, loginService, localStorageService,ShareService) {
+         debugger;
+         loginService.fillAuthData();
+         var ut = localStorageService.get("utype");
+         $rootScope.$on('$routeChangeStart', function (event, next, current) {
+             var path = $location.path();
+             if (!loginService.authentication.isAuth && path==='/devlogin' && path==='/memlogin') {
+                 if (ut === "D")
+                     $location.path('/devlogin');
+                 else
+                     $location.path('/memlogin');
+             }
+         });
+         //$http.get("../jsondata/routedata.json").success(function (data) {
+         //    debugger;
+         //    var iLoop = 0, currentRoute;
+         //    for (iLoop = 0; iLoop < data.records.length; iLoop++) {
+
+         //        currentRoute = data.records[iLoop];
+         //        var routeName = "/" + currentRoute.KeyName;
+         //        $routeProviderReference.when(routeName, {
+         //            templateUrl: currentRoute.PageUrls,
+         //            controller: currentRoute.Controller
+         //        });
+         //    }
+         //    $route.reload();
+         //});
+     }]);

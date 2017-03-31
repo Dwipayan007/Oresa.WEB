@@ -15,7 +15,7 @@ ores.controller("memLoginCtrl", ["$scope", "$location", "loginService", "localSt
         $scope.loginData = ldata;
         $scope.loginData.userType = "M";
         loginService.memlogin($scope.loginData).then(function (res) {
-            if (res != "error") {
+            if (res !== "error") {
                 $location.path('/memprofile');
             }
         });

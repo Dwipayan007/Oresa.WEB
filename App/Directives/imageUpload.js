@@ -19,6 +19,7 @@ ores.directive('imageUpload', ['$parse', function ($parse) {
     return {
         restrict: 'A',
         link: function (scope, element, attrs) {
+            debugger;
             var model = $parse(attrs.imageUpload);
             var isMultiple = attrs.multiple;
             var modelSetter = model.assign;

@@ -9,7 +9,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{048CB800-E983-4551-A64C-C86B6D12131E}</ProjectGuid>
+    <ProjectGuid>{BA0BDF9F-75AC-47B6-9210-9F72AE4619E5}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -66,6 +66,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\Services\memProfileService.js" />
+    <Content Include="App\View\memprofile.html" />
     <Content Include="packages.config" />
     <Content Include="LICENSE" />
     <Content Include="package.json" />
