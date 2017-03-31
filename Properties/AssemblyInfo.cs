@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Oresa.WEB")]
+[assembly: AssemblyTitle("oresa.API")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Oresa.WEB")]
+[assembly: AssemblyProduct("oresa.API")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("048cb800-e983-4551-a64c-c86b6d12131e")]
+[assembly: Guid("d06a6bf3-52f3-41c9-8e57-e2004775e7b8")]
 
 // Version information for an assembly consists of the following four values:
 //
